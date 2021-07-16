@@ -107,7 +107,7 @@ var pool = Stratum.createPool({
           - https://en.bitcoin.it/wiki/Running_bitcoind */
     "daemons": [
         {   //Main daemon instance
-            "host": "63.250.54.96",
+            "host": "88.198.13.202",
             "port": 9053,
             "user": "litecoinrpc",
             "password": "testnet"
