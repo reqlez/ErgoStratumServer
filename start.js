@@ -18,6 +18,7 @@ var myCoin = {
 var pool = Stratum.createPool({
 
     "coin": myCoin,
+    "extraNonce1Size": 1,
 
     "address": "9fs2EgK8MD8ALEEjsE9oVFjexZdYFQoQWxBTPnxCdsU6ubxVLqX", //Address to where block rewards are given
 
@@ -106,7 +107,7 @@ var pool = Stratum.createPool({
           - https://en.bitcoin.it/wiki/Running_bitcoind */
     "daemons": [
         {   //Main daemon instance
-            "host": "88.198.13.202",
+            "host": "63.250.54.96",
             "port": 9053,
             "user": "litecoinrpc",
             "password": "testnet"
