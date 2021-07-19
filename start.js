@@ -18,6 +18,7 @@ var myCoin = {
 var pool = Stratum.createPool({
 
     "coin": myCoin,
+    "extraNonce1Size": 1,
 
     "address": "9fs2EgK8MD8ALEEjsE9oVFjexZdYFQoQWxBTPnxCdsU6ubxVLqX", //Address to where block rewards are given
 
@@ -74,7 +75,7 @@ var pool = Stratum.createPool({
        optional and will only be used for the ports you configure it for. */
     "ports": {
         "3032": { //A port for your miners to connect to
-            "diff": 32, //the pool difficulty for this port
+            "diff": 1643198652874752, //the pool difficulty for this port
             /*
             * use this parameter to multiply difficulty to b for each request.
             * some miner like NBMiner does not support difficulty method of stratum.
@@ -86,9 +87,9 @@ var pool = Stratum.createPool({
                individual miners based on their hashrate in order to lower networking overhead */
             "varDiff": {
                 "minDiff": 8, //Minimum difficulty
-                "maxDiff": 512, //Network difficulty will be used if it is lower than this
+                "maxDiff": 16431986528747520, //Network difficulty will be used if it is lower than this
                 "targetTime": 15, //Try to get 1 share per this many seconds
-                "retargetTime": 90, //Check to see if we should retarget every this many seconds
+                "retargetTime": 10, //Check to see if we should retarget every this many seconds
                 "variancePercent": 30 //Allow time to very this % from target without retargeting
             }
         },
@@ -106,7 +107,7 @@ var pool = Stratum.createPool({
           - https://en.bitcoin.it/wiki/Running_bitcoind */
     "daemons": [
         {   //Main daemon instance
-            "host": "88.198.13.202",
+            "host": "213.239.193.208",
             "port": 9053,
             "user": "litecoinrpc",
             "password": "testnet"
