@@ -75,7 +75,7 @@ var pool = Stratum.createPool({
        optional and will only be used for the ports you configure it for. */
     "ports": {
         "3032": { //A port for your miners to connect to
-            "diff": 1643198652874752, //the pool difficulty for this port
+            "diff": 4000000, //the pool difficulty for this port
             /*
             * use this parameter to multiply difficulty to b for each request.
             * some miner like NBMiner does not support difficulty method of stratum.
@@ -107,8 +107,8 @@ var pool = Stratum.createPool({
           - https://en.bitcoin.it/wiki/Running_bitcoind */
     "daemons": [
         {   //Main daemon instance
-            "host": "213.239.193.208",
-            "port": 9053,
+            "host": "10.10.9.3",
+            "port": 9064,
             "user": "litecoinrpc",
             "password": "testnet"
         }
