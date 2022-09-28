@@ -89,8 +89,20 @@ All methods are same as Stratum v1 methods; just for clarification see the detai
 
 - Set difficulty: in order to update difficulty `mining.set_difficulty` method is used in stratum. If zero, `b` is used as is; otherwise, for any number greater that zero, proxy multiplies this value to `b` and passes it to miner.
 
+# Difficulty Calculation
 
+You can adjust `diff` parameter in order to receive a certain amount of shares in every two minutes (average block time).
+```
+diff = ((approximate network hash rate) / (miner's hash rate)) * (Number of shares)
+```
 
+For example, if you have 1Gh/s, network's hashrate is about 30Th/s, and you want 1 share per 15 seconds:
+
+```
+diff = (30T / 1G) * 8 = 240,000
+```
+
+However, the exact number of `diff` does not matter on the `vardiff` port and it will be adjusted accordig to your hashrate. You can modify the other parameters of `vardiff` port according to your needs.
 # Configurations (for pool operators)
 
 For details see the comments in the start.js file. Don't mess with these parameters if you are not a pool operator and only using this server for your node.
