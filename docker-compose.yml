@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: tn-stratum
+    image: tn-stratum
+    build:
+      context: .
+    ports:
+      - 3032:3032
