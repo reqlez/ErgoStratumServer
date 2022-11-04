@@ -67,7 +67,7 @@ var pool = Stratum.createPool({
        be configured to use its own pool difficulty and variable difficulty settings. varDiff is
        optional and will only be used for the ports you configure it for. */
     "ports": {
-        "3032": { //A port for your miners to connect to
+        "3033": { //A port for your miners to connect to
             "diff": 4000000, //the pool difficulty for this port
             /*
             * use this parameter to multiply difficulty to b for each request.
@@ -86,8 +86,8 @@ var pool = Stratum.createPool({
                 "variancePercent": 30 //Allow time to very this % from target without retargeting
             }
         },
-        "3256": { //Another port for your miners to connect to, this port does not use varDiff
-            "diff": 256 //The pool difficulty
+        "3032": { //Another port for your miners to connect to, this port does not use varDiff
+            "diff": 8 //The pool difficulty
         }
     },
 
