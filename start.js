@@ -20,20 +20,13 @@ var pool = Stratum.createPool({
     "coin": myCoin,
     "extraNonce1Size": 1,
 
-    "address": "9fs2EgK8MD8ALEEjsE9oVFjexZdYFQoQWxBTPnxCdsU6ubxVLqX", //Address to where block rewards are given
+    "address": "3WxJHNMfTjHGeVnGsmR3jzw2vn5tUZBxtmf2QoXrApZaEfy1uXcN", //Address to where block rewards are given
 
     /* Block rewards go to the configured pool wallet address to later be paid out to miners,
        except for a percentage that can go to, for examples, pool operator(s) as pool fees or
        or to donations address. Addresses or hashed public keys can be used. Here is an example
        of rewards going to the main pool op, a pool co-owner, and NOMP donation. */
-    "rewardRecipients": {
-        "n37vuNFkXfk15uFnGoVyHZ6PYQxppD3QqK": 1.5, //1.5% goes to pool op
-        "mirj3LtZxbSTharhtXvotqtJXUY7ki5qfx": 0.5, //0.5% goes to a pool co-owner
-
-        /* 0.1% donation to NOMP. This pubkey can accept any type of coin, please leave this in
-           your config to help support NOMP development. */
-        "22851477d63a085dbc2398c8430af1c09e7343f6": 0.1
-    },
+    "rewardRecipients": { },
 
     "blockRefreshInterval": 1000, //How often to poll RPC daemons for new blocks, in milliseconds
 
@@ -107,8 +100,8 @@ var pool = Stratum.createPool({
           - https://en.bitcoin.it/wiki/Running_bitcoind */
     "daemons": [
         {   //Main daemon instance
-            "host": "213.239.193.208",
-            "port": 9053,
+            "host": "172.17.0.1",
+            "port": 9052,
             "user": "litecoinrpc",
             "password": "testnet"
         }
