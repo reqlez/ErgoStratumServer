@@ -6,4 +6,4 @@ COPY package-lock.json .
 RUN npm install
 COPY . .
 CMD ["node", "start.js"]
-EXPOSE 3032
+EXPOSE 3032 3033
